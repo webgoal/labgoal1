@@ -18,3 +18,9 @@
   - Passar informações da Controller para a View
     ./app/controllers/cars_controller.rb
     ./app/views/cars/index.html.erb
+
+#PASSO 6
+  - Gerar a model Carro
+    docker-compose run app rails g model Car modelo:string ano:integer marca:string classe:string preco:float
+  - Executar as migrates
+    docker-compose run app rake db:migrate
