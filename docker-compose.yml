@@ -1,0 +1,27 @@
+version: '2'
+volumes:
+  gems:
+  mysql:
+services:
+  app:
+    build: .
+    volumes:
+      - gems:/usr/local/bundle
+      - .:/opt/app
+    ports:
+      - "80:3000"
+    environment:
+      - TZ=America/Sao_Paulo
+    links:
+      - db
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    command: "--sql-mode='NO_ENGINE_SUBSTITUTION'"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mypass
+      - MYSQL_DATABASE=app_development
