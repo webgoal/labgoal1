@@ -5,3 +5,7 @@
   - Instalar o rails
     docker-compose run app gem install rails
     docker-compose run app rails new . -d mysql
+
+#PASSO 3
+  - Configurar o Banco
+    ./config/database.yml
