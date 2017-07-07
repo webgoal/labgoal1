@@ -24,3 +24,8 @@
     docker-compose run app rails g model Car modelo:string ano:integer marca:string classe:string preco:float
   - Executar as migrates
     docker-compose run app rake db:migrate
+
+#PASSO 7
+  - Brincar com o console
+    docker-compose run app rails c
+  - Adicione carros!
