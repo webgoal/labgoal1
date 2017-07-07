@@ -9,3 +9,7 @@
 #PASSO 3
   - Configurar o Banco
     ./config/database.yml
+
+#PASSO 4
+  - Gerar Controller/View
+    docker-compose run app rails g controller Cars index
