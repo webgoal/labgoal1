@@ -29,3 +29,6 @@
   - Brincar com o console
     docker-compose run app rails c
   - Adicione carros!
+
+#PASSO 8
+  - Carregar carros existentes na View

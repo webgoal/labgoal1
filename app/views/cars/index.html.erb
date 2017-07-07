@@ -1,1 +1,21 @@
-<h1><%= @variavel %></h1>
+<h1>Meus carros</h1>
+<table style="width:100%">
+  <tr>
+    <th>#</th>
+    <th>Modelo</th>
+    <th>Ano</th>
+    <th>Marca</th>
+    <th>Classe</th>
+    <th>Preço</th>
+  </tr>
+  <% @carros.each do |carro| %>
+  <tr>
+    <td><%= carro.id %></td>
+    <td><%= carro.modelo %></td>
+    <td><%= carro.ano %></td>
+    <td><%= carro.marca %></td>
+    <td><%= carro.classe %></td>
+    <td>R$ <%= carro.preco %></td>
+  </tr>
+  <% end %>
+</table>

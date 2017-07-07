@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
   def index
-    @variavel = "Hello Rails"
+    @carros = Car.all
   end
 end
